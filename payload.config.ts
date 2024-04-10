@@ -24,6 +24,10 @@ import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { buildConfig } from 'payload/config'
 import sharp from 'sharp'
 import { fileURLToPath } from 'url'
+import { Users } from '@/payload-modules/collections/Users'
+import { Pages } from '@/payload-modules/collections/Pages'
+import { Tenants } from '@/payload-modules/collections/Tenants'
+import { seed } from '@/payload-modules/seed'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -31,34 +35,7 @@ const dirname = path.dirname(filename)
 export default buildConfig({
   //editor: slateEditor({}),
   editor: lexicalEditor(),
-  collections: [
-    {
-      slug: 'pages',
-      admin: {
-        useAsTitle: 'title',
-      },
-      fields: [
-        {
-          name: 'title',
-          type: 'text',
-        },
-        {
-          name: 'content',
-          type: 'richText',
-        },
-      ],
-    },
-    {
-      slug: 'media',
-      upload: true,
-      fields: [
-        {
-          name: 'text',
-          type: 'text',
-        },
-      ],
-    },
-  ],
+  collections: [Users, Tenants, Pages],
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
@@ -94,13 +71,14 @@ export default buildConfig({
     })
 
     if (existingUsers.docs.length === 0) {
-      await payload.create({
-        collection: 'users',
-        data: {
-          email: 'dev@payloadcms.com',
-          password: 'test',
-        },
-      })
+      await seed(payload)
+      // await payload.create({
+      //   collection: 'users',
+      //   data: {
+      //     email: 'dev@payloadcms.com',
+      //     password: 'test',
+      //   },
+      // })
     }
   },
   // Sharp is now an optional dependency -
