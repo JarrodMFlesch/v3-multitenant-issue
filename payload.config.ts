@@ -28,13 +28,14 @@ import { Users } from '@/payload-modules/collections/Users'
 import { Pages } from '@/payload-modules/collections/Pages'
 import { Tenants } from '@/payload-modules/collections/Tenants'
 import { seed } from '@/payload-modules/seed'
+import { slateEditor } from '@payloadcms/richtext-slate'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
-  //editor: slateEditor({}),
-  editor: lexicalEditor(),
+  editor: slateEditor({}),
+  // editor: lexicalEditor(),
   collections: [Users, Tenants, Pages],
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
