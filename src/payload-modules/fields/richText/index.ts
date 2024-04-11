@@ -73,7 +73,7 @@ const richText: RichText = (
                     disableLabel: true,
                     overrides: {
                       admin: {
-                        condition: (_, data) => Boolean(data?.enableLink),
+                        condition: (_: any, data: any) => Boolean(data?.enableLink),
                       },
                     },
                   }),
@@ -86,7 +86,7 @@ const richText: RichText = (
         },
       }),
     },
-    overrides,
+    overrides as NonNullable<Partial<RichTextField>>,
   )
 
 export default richText

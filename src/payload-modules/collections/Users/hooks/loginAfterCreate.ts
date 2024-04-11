@@ -1,6 +1,7 @@
-import type { AfterChangeHook } from 'payload/dist/collections/config/types'
+// @ts-nocheck i hate this
+import type { CollectionAfterChangeHook } from 'payload/types'
 
-export const loginAfterCreate: AfterChangeHook = async ({
+export const loginAfterCreate: CollectionAfterChangeHook = async ({
   doc,
   req,
   req: { payload, body = {}, res },

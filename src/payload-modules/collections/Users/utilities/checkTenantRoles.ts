@@ -1,7 +1,7 @@
 import type { User } from '~/payload-types'
 
 export const checkTenantRoles = (
-  allRoles: User['tenants'][0]['roles'] = [],
+  allRoles: NonNullable<User['tenants']>[0]['roles'] = [],
   user: User | undefined = undefined,
   tenant: NonNullable<User['tenants']>[0]['tenant'] | undefined = undefined,
 ): boolean => {

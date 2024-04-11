@@ -1,6 +1,6 @@
-import type { AfterLoginHook } from 'payload/dist/collections/config/types'
+import type { CollectionAfterLoginHook } from 'payload/types'
 
-export const recordLastLoggedInTenant: AfterLoginHook = async ({ req, user }) => {
+export const recordLastLoggedInTenant: CollectionAfterLoginHook = async ({ req, user }) => {
   try {
     const relatedOrg = await req.payload
       .find({

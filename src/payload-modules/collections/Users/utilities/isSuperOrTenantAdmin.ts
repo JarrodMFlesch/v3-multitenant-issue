@@ -1,14 +1,16 @@
 import type { PayloadRequest } from 'payload/types'
 
 import { isSuperAdmin } from '../../../utilities/isSuperAdmin'
+import { Tenant, User } from '~/payload-types'
 
 const logs = true
 
 export const isSuperOrTenantAdmin = async (args: { req: PayloadRequest }): Promise<boolean> => {
   const {
     req,
-    req: { user, payload },
+    req: { payload },
   } = args
+  const user: User = req.user
 
   // always allow super admins through
   if (isSuperAdmin(user)) {
@@ -50,7 +52,7 @@ export const isSuperOrTenantAdmin = async (args: { req: PayloadRequest }): Promi
 
   // finally check if the user is an admin of this tenant
   const tenantWithUser = user?.tenants?.find(
-    ({ tenant: userTenant }) => userTenant?.id === foundTenants.docs[0].id,
+    ({ tenant: userTenant }) => (userTenant as Tenant)?.id === foundTenants.docs[0].id,
   )
 
   if (tenantWithUser?.roles?.some((role) => role === 'admin')) {

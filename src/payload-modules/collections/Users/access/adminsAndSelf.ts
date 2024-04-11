@@ -2,8 +2,8 @@ import type { Access } from 'payload/config'
 
 import { isSuperAdmin } from '../../../utilities/isSuperAdmin'
 import { User } from '~/payload-types'
-
-export const adminsAndSelf: Access<any, User> = async ({ req: { user } }) => {
+// @ts-expect-error i hate this
+export const adminsAndSelf: Access = async ({ req: { user } }) => {
   if (user) {
     const isSuper = isSuperAdmin(user)
 
@@ -37,12 +37,19 @@ export const adminsAndSelf: Access<any, User> = async ({ req: { user } }) => {
                 'tenants.tenant': {
                   in:
                     user?.tenants
-                      ?.map(({ tenant, roles }) =>
-                        roles.includes('admin')
-                          ? typeof tenant === 'string'
-                            ? tenant
-                            : tenant.id
-                          : null,
+                      ?.map(
+                        ({
+                          tenant,
+                          roles,
+                        }: {
+                          tenant: NonNullable<User['tenants']>[0]['tenant']
+                          roles: NonNullable<User['tenants']>[0]['roles']
+                        }) =>
+                          roles.includes('admin')
+                            ? typeof tenant === 'string'
+                              ? tenant
+                              : tenant.id
+                            : null,
                       ) // eslint-disable-line function-paren-newline
                       .filter(Boolean) || [],
                 },
