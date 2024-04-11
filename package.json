@@ -17,13 +17,17 @@
     "node": ">=18.19.0"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.552.0",
+    "@aws-sdk/lib-storage": "^3.552.0",
     "@payloadcms/db-mongodb": "3.0.0-beta.0",
     "@payloadcms/db-postgres": "3.0.0-beta.0",
     "@payloadcms/next": "3.0.0-beta.0",
+    "@payloadcms/plugin-cloud-storage": "3.0.0-beta.0",
     "@payloadcms/richtext-lexical": "3.0.0-beta.0",
     "@payloadcms/richtext-slate": "3.0.0-beta.0",
     "@payloadcms/translations": "3.0.0-beta.0",
     "@payloadcms/ui": "3.0.0-beta.0",
+    "aws-crt": "^1.21.1",
     "cross-env": "^7.0.3",
     "next": "14.2.0-canary.23",
     "payload": "3.0.0-beta.0",

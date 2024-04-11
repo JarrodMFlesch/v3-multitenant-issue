@@ -26,9 +26,12 @@ import sharp from 'sharp'
 import { fileURLToPath } from 'url'
 import { Users } from '@/payload-modules/collections/Users'
 import { Pages } from '@/payload-modules/collections/Pages'
+import { Media } from '@/payload-modules/collections/Media'
 import { Tenants } from '@/payload-modules/collections/Tenants'
 import { seed } from '@/payload-modules/seed'
 import { slateEditor } from '@payloadcms/richtext-slate'
+import { cloudStorage } from '@payloadcms/plugin-cloud-storage'
+import { s3Adapter } from '@payloadcms/plugin-cloud-storage/s3'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -36,7 +39,7 @@ const dirname = path.dirname(filename)
 export default buildConfig({
   editor: slateEditor({}),
   // editor: lexicalEditor(),
-  collections: [Users, Tenants, Pages],
+  collections: [Users, Tenants, Pages, Media],
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
@@ -88,5 +91,28 @@ export default buildConfig({
 
   // This is temporary - we may make an adapter pattern
   // for this before reaching 3.0 stable
+  plugins: [
+    // Pass the plugin to Payload
+    cloudStorage({
+      collections: {
+        // Enable cloud storage for Media collection
+        media: {
+          // Create the S3 adapter
+          adapter: s3Adapter({
+            config: {
+              endpoint: process.env.S3_ENDPOINT!,
+              region: 'us-east-1',
+              credentials: {
+                accessKeyId: process.env.S3_ACCESS_KEY_ID!,
+                secretAccessKey: process.env.S3_SECRET_ACCESS_KEY!,
+              },
+            },
+            bucket: process.env.S3_BUCKET!,
+          }),
+        },
+      },
+    }),
+  ],
+
   sharp,
 })
