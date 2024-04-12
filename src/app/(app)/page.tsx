@@ -1,8 +1,10 @@
 import Example from '@/components/Example'
+import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import React from 'react'
 
 const Page = () => {
+  redirect('/admin')
   return (
     <article className={['container'].filter(Boolean).join(' ')}>
       <h1>
