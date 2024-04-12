@@ -27,6 +27,7 @@ import { fileURLToPath } from 'url'
 import { Users } from '@/payload-modules/collections/Users'
 import { Pages } from '@/payload-modules/collections/Pages'
 import { Media } from '@/payload-modules/collections/Media'
+import { Events } from '@/payload-modules/collections/Events'
 import { Tenants } from '@/payload-modules/collections/Tenants'
 import { seed } from '@/payload-modules/seed'
 import { slateEditor } from '@payloadcms/richtext-slate'
@@ -39,7 +40,7 @@ const dirname = path.dirname(filename)
 export default buildConfig({
   editor: slateEditor({}),
   // editor: lexicalEditor(),
-  collections: [Users, Tenants, Pages, Media],
+  collections: [Users, Tenants, Pages, Media, Events],
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
