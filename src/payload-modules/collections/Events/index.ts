@@ -11,6 +11,7 @@ export const Events: CollectionConfig = {
   slug: 'events',
   admin: {
     useAsTitle: 'title',
+    hidden: true,
     defaultColumns: ['title', 'updatedAt'],
   },
   access: {
