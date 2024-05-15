@@ -14,7 +14,7 @@ export const isSuperOrTenantAdmin = async (args: { req: PayloadRequest }): Promi
   console.log(req.host, 'host')
   console.log(req.origin, 'origin')
   console.log(req.url, 'url')
-  console.log(req)
+  console.log(req.pathname, 'pathname')
   // always allow super admins through
   if (isSuperAdmin(user)) {
     return true
