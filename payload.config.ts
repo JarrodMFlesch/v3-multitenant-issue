@@ -3,10 +3,10 @@ import path from 'path'
 import { en } from 'payload/i18n/en'
 import {
   AlignFeature,
-  BlockQuoteFeature,
+  BlockquoteFeature,
   BlocksFeature,
   BoldFeature,
-  CheckListFeature,
+  ChecklistFeature,
   HeadingFeature,
   IndentFeature,
   InlineCodeFeature,
@@ -31,8 +31,8 @@ import { Events } from '@/payload-modules/collections/Events'
 import { Tenants } from '@/payload-modules/collections/Tenants'
 import { seed } from '@/payload-modules/seed'
 import { slateEditor } from '@payloadcms/richtext-slate'
-import { cloudStorage } from '@payloadcms/plugin-cloud-storage'
-import { s3Adapter } from '@payloadcms/plugin-cloud-storage/s3'
+import { s3Storage } from '@payloadcms/storage-s3'
+import { Posters } from './src/payload-modules/collections/Posters'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -40,7 +40,7 @@ const dirname = path.dirname(filename)
 export default buildConfig({
   editor: slateEditor({}),
   // editor: lexicalEditor(),
-  collections: [Users, Tenants, Pages, Media, Events],
+  collections: [Users, Tenants, Pages, Media, Events, Posters],
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
@@ -69,7 +69,7 @@ export default buildConfig({
   //     prefillOnly: true,
   //   },
   // },
-  async onInit(payload) {
+  async onInit(payload: any) {
     const existingUsers = await payload.find({
       collection: 'users',
       limit: 1,
@@ -94,25 +94,41 @@ export default buildConfig({
   // for this before reaching 3.0 stable
   plugins: [
     // Pass the plugin to Payload
-    cloudStorage({
+    s3Storage({
       collections: {
-        // Enable cloud storage for Media collection
-        media: {
-          // Create the S3 adapter
-          adapter: s3Adapter({
-            config: {
-              endpoint: process.env.S3_ENDPOINT!,
-              region: 'us-east-1',
-              credentials: {
-                accessKeyId: process.env.S3_ACCESS_KEY_ID!,
-                secretAccessKey: process.env.S3_SECRET_ACCESS_KEY!,
-              },
-            },
-            bucket: process.env.S3_BUCKET!,
-          }),
+        media: true,
+        posters: true,
+      },
+      bucket: process.env.S3_BUCKET!,
+      config: {
+        endpoint: process.env.S3_ENDPOINT!,
+        region: 'us-east-1',
+        credentials: {
+          accessKeyId: process.env.S3_ACCESS_KEY_ID!,
+          secretAccessKey: process.env.S3_SECRET_ACCESS_KEY!,
         },
       },
     }),
+
+    // cloudStoragePlugin({
+    //   collections: {
+    //     // Enable cloud storage for Media collection
+    //     media: {
+    //       // Create the S3 adapter
+    //       adapter: s3Adapter({
+    //         config: {
+    //           endpoint: process.env.S3_ENDPOINT!,
+    //           region: 'us-east-1',
+    //           credentials: {
+    //             accessKeyId: process.env.S3_ACCESS_KEY_ID!,
+    //             secretAccessKey: process.env.S3_SECRET_ACCESS_KEY!,
+    //           },
+    //         },
+    //         bucket: process.env.S3_BUCKET!,
+    //       }),
+    //     },
+    //   },
+    // }),
   ],
 
   sharp,
