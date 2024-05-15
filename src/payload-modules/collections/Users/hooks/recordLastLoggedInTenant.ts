@@ -2,10 +2,6 @@ import type { CollectionAfterLoginHook } from 'payload/types'
 
 export const recordLastLoggedInTenant: CollectionAfterLoginHook = async ({ req, user }) => {
   try {
-    console.log(req.host, 'host')
-    console.log(req.origin, 'origin')
-    console.log(req.url, 'url')
-    console.log(req)
     const relatedOrg = await req.payload
       .find({
         collection: 'tenants',
