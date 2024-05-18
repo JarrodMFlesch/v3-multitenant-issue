@@ -97,7 +97,6 @@ export default buildConfig({
     s3Storage({
       collections: {
         media: true,
-        posters: true,
       },
       bucket: process.env.S3_BUCKET!,
       config: {
