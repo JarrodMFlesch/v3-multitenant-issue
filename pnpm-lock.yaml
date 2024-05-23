@@ -6,17 +6,17 @@ settings:
 
 dependencies:
   '@payloadcms/db-mongodb':
-    specifier: 3.0.0-beta.34
-    version: 3.0.0-beta.34(aws-crt@1.21.1)(payload@3.0.0-beta.34)
+    specifier: beta
+    version: 3.0.0-beta.36(aws-crt@1.21.1)(payload@3.0.0-beta.36)
   '@payloadcms/next':
-    specifier: 3.0.0-beta.34
-    version: 3.0.0-beta.34(@types/react@18.2.74)(graphql@16.8.1)(monaco-editor@0.47.0)(next@14.3.0-canary.68)(payload@3.0.0-beta.34)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)(typescript@5.4.5)
+    specifier: beta
+    version: 3.0.0-beta.36(@types/react@18.2.74)(graphql@16.8.1)(monaco-editor@0.47.0)(next@14.3.0-canary.68)(payload@3.0.0-beta.36)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)(typescript@5.4.5)
   '@payloadcms/richtext-lexical':
-    specifier: 3.0.0-beta.34
-    version: 3.0.0-beta.34(@faceless-ui/modal@2.0.2)(@lexical/headless@0.15.0)(@lexical/link@0.15.0)(@lexical/list@0.15.0)(@lexical/mark@0.15.0)(@lexical/markdown@0.15.0)(@lexical/react@0.15.0)(@lexical/rich-text@0.15.0)(@lexical/selection@0.15.0)(@lexical/utils@0.15.0)(@payloadcms/next@3.0.0-beta.34)(@payloadcms/translations@3.0.0-beta.34)(@payloadcms/ui@3.0.0-beta.34)(lexical@0.15.0)(payload@3.0.0-beta.34)(react-dom@18.2.0)(react@18.2.0)
+    specifier: beta
+    version: 3.0.0-beta.36(@faceless-ui/modal@2.0.2)(@lexical/headless@0.15.0)(@lexical/link@0.15.0)(@lexical/list@0.15.0)(@lexical/mark@0.15.0)(@lexical/markdown@0.15.0)(@lexical/react@0.15.0)(@lexical/rich-text@0.15.0)(@lexical/selection@0.15.0)(@lexical/utils@0.15.0)(@payloadcms/next@3.0.0-beta.36)(@payloadcms/translations@3.0.0-beta.36)(@payloadcms/ui@3.0.0-beta.36)(lexical@0.15.0)(payload@3.0.0-beta.36)(react-dom@18.2.0)(react@18.2.0)
   '@payloadcms/ui':
-    specifier: 3.0.0-beta.34
-    version: 3.0.0-beta.34(@types/react@18.2.74)(monaco-editor@0.47.0)(next@14.3.0-canary.68)(payload@3.0.0-beta.34)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)
+    specifier: beta
+    version: 3.0.0-beta.36(@types/react@18.2.74)(monaco-editor@0.47.0)(next@14.3.0-canary.68)(payload@3.0.0-beta.36)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)
   aws-crt:
     specifier: ^1.21.1
     version: 1.21.1
@@ -30,8 +30,8 @@ dependencies:
     specifier: 14.3.0-canary.68
     version: 14.3.0-canary.68(react-dom@18.2.0)(react@18.2.0)
   payload:
-    specifier: 3.0.0-beta.34
-    version: 3.0.0-beta.34(@swc/core@1.4.12)(@swc/types@0.1.6)(graphql@16.8.1)(typescript@5.4.5)
+    specifier: beta
+    version: 3.0.0-beta.36(@swc/core@1.4.12)(@swc/types@0.1.6)(graphql@16.8.1)(typescript@5.4.5)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -1560,10 +1560,10 @@ packages:
       fastq: 1.17.1
     dev: true
 
-  /@payloadcms/db-mongodb@3.0.0-beta.34(aws-crt@1.21.1)(payload@3.0.0-beta.34):
-    resolution: {integrity: sha512-pdR85BxPYDeUdh+xIwPuxVSbEwmoao+fGPTU39kWEpmY01byvaeWWReswL67/dIMBjlghAA1tWzO2JZ7aGY7ZA==}
+  /@payloadcms/db-mongodb@3.0.0-beta.36(aws-crt@1.21.1)(payload@3.0.0-beta.36):
+    resolution: {integrity: sha512-PrgHmCJB4aEOXURKCzldmHPex0uy4moFWLleDZJkKWdGtsr/OtKJoBORoufjBj+yzSa9k27Krbax4GiE00oy+w==}
     peerDependencies:
-      payload: 3.0.0-beta.34
+      payload: 3.0.0-beta.36
     dependencies:
       bson-objectid: 2.0.4
       deepmerge: 4.3.1
@@ -1571,7 +1571,7 @@ packages:
       http-status: 1.6.2
       mongoose: 6.12.3(aws-crt@1.21.1)
       mongoose-paginate-v2: 1.7.22
-      payload: 3.0.0-beta.34(@swc/core@1.4.12)(@swc/types@0.1.6)(graphql@16.8.1)(typescript@5.4.5)
+      payload: 3.0.0-beta.36(@swc/core@1.4.12)(@swc/types@0.1.6)(graphql@16.8.1)(typescript@5.4.5)
       prompts: 2.4.2
       uuid: 9.0.0
     transitivePeerDependencies:
@@ -1579,34 +1579,34 @@ packages:
       - supports-color
     dev: false
 
-  /@payloadcms/graphql@3.0.0-beta.34(graphql@16.8.1)(payload@3.0.0-beta.34)(typescript@5.4.5):
-    resolution: {integrity: sha512-ALB+8Pe6UuXui2CKZ5UDiU3qGhTP+hMlpcMsZ4uXX1IeqBUadKe+S4Cj32yYrFq/JJ9nKCj23LNNwfuHLBZNRQ==}
+  /@payloadcms/graphql@3.0.0-beta.36(graphql@16.8.1)(payload@3.0.0-beta.36)(typescript@5.4.5):
+    resolution: {integrity: sha512-sL88e0Il+slufB19l+VZoanioAbHLuApa/2DMydnHR91A476OFVw6hVwd6u35MAmQAOKUzNQTUQ/ojAJcCXVQw==}
     hasBin: true
     peerDependencies:
       graphql: ^16.8.1
-      payload: 3.0.0-beta.34
+      payload: 3.0.0-beta.36
     dependencies:
       graphql: 16.8.1
       graphql-scalars: 1.22.2(graphql@16.8.1)
-      payload: 3.0.0-beta.34(@swc/core@1.4.12)(@swc/types@0.1.6)(graphql@16.8.1)(typescript@5.4.5)
+      payload: 3.0.0-beta.36(@swc/core@1.4.12)(@swc/types@0.1.6)(graphql@16.8.1)(typescript@5.4.5)
       pluralize: 8.0.0
       ts-essentials: 7.0.3(typescript@5.4.5)
     transitivePeerDependencies:
       - typescript
     dev: false
 
-  /@payloadcms/next@3.0.0-beta.34(@types/react@18.2.74)(graphql@16.8.1)(monaco-editor@0.47.0)(next@14.3.0-canary.68)(payload@3.0.0-beta.34)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-NkIweEZXzRjqt1SufC2bu4Zs+uiiJzQB0+8MT5V5Q3FxEMQyEF/7pjgAZtfikMG75IHzE8gp/YP4xP5ULemd0A==}
+  /@payloadcms/next@3.0.0-beta.36(@types/react@18.2.74)(graphql@16.8.1)(monaco-editor@0.47.0)(next@14.3.0-canary.68)(payload@3.0.0-beta.36)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-5582JVeMh55wYEsHAwHfqupaQcJZ995PE50s5KJqv+Rxz7ZWJlXEqxSD3h2sFJcyu39EQlcNxhkMtM9EnrEIVg==}
     engines: {node: '>=18.20.2'}
     peerDependencies:
       graphql: ^16.8.1
-      next: ^14.3.0-canary.68
-      payload: 3.0.0-beta.34
+      next: ^15.0.0-rc.0
+      payload: 3.0.0-beta.36
     dependencies:
       '@dnd-kit/core': 6.0.8(react-dom@18.2.0)(react@18.2.0)
-      '@payloadcms/graphql': 3.0.0-beta.34(graphql@16.8.1)(payload@3.0.0-beta.34)(typescript@5.4.5)
-      '@payloadcms/translations': 3.0.0-beta.34
-      '@payloadcms/ui': 3.0.0-beta.34(@types/react@18.2.74)(monaco-editor@0.47.0)(next@14.3.0-canary.68)(payload@3.0.0-beta.34)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)
+      '@payloadcms/graphql': 3.0.0-beta.36(graphql@16.8.1)(payload@3.0.0-beta.36)(typescript@5.4.5)
+      '@payloadcms/translations': 3.0.0-beta.36
+      '@payloadcms/ui': 3.0.0-beta.36(@types/react@18.2.74)(monaco-editor@0.47.0)(next@14.3.0-canary.68)(payload@3.0.0-beta.36)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)
       '@types/busboy': 1.5.3
       busboy: 1.6.0
       deep-equal: 2.2.2
@@ -1617,7 +1617,7 @@ packages:
       http-status: 1.6.2
       next: 14.3.0-canary.68(react-dom@18.2.0)(react@18.2.0)
       path-to-regexp: 6.2.1
-      payload: 3.0.0-beta.34(@swc/core@1.4.12)(@swc/types@0.1.6)(graphql@16.8.1)(typescript@5.4.5)
+      payload: 3.0.0-beta.36(@swc/core@1.4.12)(@swc/types@0.1.6)(graphql@16.8.1)(typescript@5.4.5)
       qs: 6.11.2
       react-diff-viewer-continued: 3.2.6(react-dom@18.2.0)(react@18.2.0)
       react-toastify: 10.0.5(react-dom@18.2.0)(react@18.2.0)
@@ -1635,8 +1635,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@payloadcms/richtext-lexical@3.0.0-beta.34(@faceless-ui/modal@2.0.2)(@lexical/headless@0.15.0)(@lexical/link@0.15.0)(@lexical/list@0.15.0)(@lexical/mark@0.15.0)(@lexical/markdown@0.15.0)(@lexical/react@0.15.0)(@lexical/rich-text@0.15.0)(@lexical/selection@0.15.0)(@lexical/utils@0.15.0)(@payloadcms/next@3.0.0-beta.34)(@payloadcms/translations@3.0.0-beta.34)(@payloadcms/ui@3.0.0-beta.34)(lexical@0.15.0)(payload@3.0.0-beta.34)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-Al6uGaq4dFmMCIosKwhla7yc9AG5t4+PR/q3CzQT93wrWLccWdUhMCz5XSQ3HUb+c7sbgcHvwnY0Y4hQBEqeIw==}
+  /@payloadcms/richtext-lexical@3.0.0-beta.36(@faceless-ui/modal@2.0.2)(@lexical/headless@0.15.0)(@lexical/link@0.15.0)(@lexical/list@0.15.0)(@lexical/mark@0.15.0)(@lexical/markdown@0.15.0)(@lexical/react@0.15.0)(@lexical/rich-text@0.15.0)(@lexical/selection@0.15.0)(@lexical/utils@0.15.0)(@payloadcms/next@3.0.0-beta.36)(@payloadcms/translations@3.0.0-beta.36)(@payloadcms/ui@3.0.0-beta.36)(lexical@0.15.0)(payload@3.0.0-beta.36)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-7CU62FNhnVtNAnDt+935ADM7Maopx837V30kP9hC/IN5oOjPLfaZrdSPZsHHYxTFWIWRyMs89rPXbblpmi/snQ==}
     engines: {node: '>=18.20.2'}
     peerDependencies:
       '@faceless-ui/modal': 2.0.2
@@ -1649,13 +1649,13 @@ packages:
       '@lexical/rich-text': 0.15.0
       '@lexical/selection': 0.15.0
       '@lexical/utils': 0.15.0
-      '@payloadcms/next': 3.0.0-beta.34
-      '@payloadcms/translations': 3.0.0-beta.34
-      '@payloadcms/ui': 3.0.0-beta.34
+      '@payloadcms/next': 3.0.0-beta.36
+      '@payloadcms/translations': 3.0.0-beta.36
+      '@payloadcms/ui': 3.0.0-beta.36
       lexical: 0.15.0
-      payload: 3.0.0-beta.34
-      react: ^18.2.0 || ^19.0.0
-      react-dom: ^18.2.0 || ^19.0.0
+      payload: 3.0.0-beta.36
+      react: ^19.0.0 || ^19.0.0-rc-f994737d14-20240522
+      react-dom: ^19.0.0 || ^19.0.0-rc-f994737d14-20240522
     dependencies:
       '@faceless-ui/modal': 2.0.2(react-dom@18.2.0)(react@18.2.0)
       '@lexical/headless': 0.15.0
@@ -1667,9 +1667,9 @@ packages:
       '@lexical/rich-text': 0.15.0
       '@lexical/selection': 0.15.0
       '@lexical/utils': 0.15.0
-      '@payloadcms/next': 3.0.0-beta.34(@types/react@18.2.74)(graphql@16.8.1)(monaco-editor@0.47.0)(next@14.3.0-canary.68)(payload@3.0.0-beta.34)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)(typescript@5.4.5)
-      '@payloadcms/translations': 3.0.0-beta.34
-      '@payloadcms/ui': 3.0.0-beta.34(@types/react@18.2.74)(monaco-editor@0.47.0)(next@14.3.0-canary.68)(payload@3.0.0-beta.34)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)
+      '@payloadcms/next': 3.0.0-beta.36(@types/react@18.2.74)(graphql@16.8.1)(monaco-editor@0.47.0)(next@14.3.0-canary.68)(payload@3.0.0-beta.36)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)(typescript@5.4.5)
+      '@payloadcms/translations': 3.0.0-beta.36
+      '@payloadcms/ui': 3.0.0-beta.36(@types/react@18.2.74)(monaco-editor@0.47.0)(next@14.3.0-canary.68)(payload@3.0.0-beta.36)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)
       '@types/uuid': 9.0.8
       bson-objectid: 2.0.4
       classnames: 2.5.1
@@ -1677,25 +1677,25 @@ packages:
       json-schema: 0.4.0
       lexical: 0.15.0
       lodash: 4.17.21
-      payload: 3.0.0-beta.34(@swc/core@1.4.12)(@swc/types@0.1.6)(graphql@16.8.1)(typescript@5.4.5)
+      payload: 3.0.0-beta.36(@swc/core@1.4.12)(@swc/types@0.1.6)(graphql@16.8.1)(typescript@5.4.5)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-error-boundary: 4.0.13(react@18.2.0)
       uuid: 9.0.1
     dev: false
 
-  /@payloadcms/translations@3.0.0-beta.34:
-    resolution: {integrity: sha512-ZK+m7BzdKYLhQoxU+z9T4GG1B3L+aV0SoPrB6R6K47OscizvyDWTeJgzmct5n8vH2SWhUaEEUeKuXepFchBmeQ==}
+  /@payloadcms/translations@3.0.0-beta.36:
+    resolution: {integrity: sha512-7khAAlfdpYcCFnaPrwRI/GRHM6Qoc+SpGTKPnuFmZ3GEuo3QEEu5kn/aoe4yPhgEc39EX0seec/DVkoZopNPQg==}
     dev: false
 
-  /@payloadcms/ui@3.0.0-beta.34(@types/react@18.2.74)(monaco-editor@0.47.0)(next@14.3.0-canary.68)(payload@3.0.0-beta.34)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0):
-    resolution: {integrity: sha512-uV7eGYfnYTxCNSnmonym20D7clFApSUarvs47FaR2Y0mgP+orkRGwJSqebkhbXdata1wepA4DaqN4PI+Ac5SRg==}
+  /@payloadcms/ui@3.0.0-beta.36(@types/react@18.2.74)(monaco-editor@0.47.0)(next@14.3.0-canary.68)(payload@3.0.0-beta.36)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0):
+    resolution: {integrity: sha512-c9rRpF/+D0qatfEsEftrlv/nrrMV5tNGJY2xzqSCUUUeY+YTUhIWg49mV5tWzrwRhPFUtfwoPpkpPEshm+M5bg==}
     engines: {node: '>=18.20.2'}
     peerDependencies:
-      next: ^14.3.0-canary.68
-      payload: 3.0.0-beta.34
-      react: ^18.2.0 || ^19.0.0
-      react-dom: ^18.2.0 || ^19.0.0
+      next: ^15.0.0-rc.0
+      payload: 3.0.0-beta.36
+      react: ^19.0.0 || ^19.0.0-rc-f994737d14-20240522
+      react-dom: ^19.0.0 || ^19.0.0-rc-f994737d14-20240522
     dependencies:
       '@dnd-kit/core': 6.0.8(react-dom@18.2.0)(react@18.2.0)
       '@dnd-kit/sortable': 7.0.2(@dnd-kit/core@6.0.8)(react@18.2.0)
@@ -1703,7 +1703,7 @@ packages:
       '@faceless-ui/scroll-info': 1.3.0(react-dom@18.2.0)(react@18.2.0)
       '@faceless-ui/window-info': 2.1.2(react-dom@18.2.0)(react@18.2.0)
       '@monaco-editor/react': 4.5.1(monaco-editor@0.47.0)(react-dom@18.2.0)(react@18.2.0)
-      '@payloadcms/translations': 3.0.0-beta.34
+      '@payloadcms/translations': 3.0.0-beta.36
       body-scroll-lock: 4.0.0-beta.0
       bson-objectid: 2.0.4
       date-fns: 3.3.1
@@ -1712,14 +1712,14 @@ packages:
       md5: 2.3.0
       next: 14.3.0-canary.68(react-dom@18.2.0)(react@18.2.0)
       object-to-formdata: 4.5.1
-      payload: 3.0.0-beta.34(@swc/core@1.4.12)(@swc/types@0.1.6)(graphql@16.8.1)(typescript@5.4.5)
+      payload: 3.0.0-beta.36(@swc/core@1.4.12)(@swc/types@0.1.6)(graphql@16.8.1)(typescript@5.4.5)
       qs: 6.11.2
       react: 18.2.0
       react-animate-height: 2.1.2(react-dom@18.2.0)(react@18.2.0)
-      react-datepicker: 6.2.0(react-dom@18.2.0)(react@18.2.0)
+      react-datepicker: 6.9.0(react-dom@18.2.0)(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
       react-image-crop: 10.1.8(react@18.2.0)
-      react-select: 5.7.4(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0)
+      react-select: 5.8.0(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0)
       react-toastify: 10.0.5(react-dom@18.2.0)(react@18.2.0)
       use-context-selector: 1.4.1(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)
       uuid: 9.0.1
@@ -5389,8 +5389,8 @@ packages:
     resolution: {integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==}
     engines: {node: '>=8'}
 
-  /payload@3.0.0-beta.34(@swc/core@1.4.12)(@swc/types@0.1.6)(graphql@16.8.1)(typescript@5.4.5):
-    resolution: {integrity: sha512-Xxlx4dYbirfFm3z1THPXzzeGVRBRqMiF7qa4/e6sngDWd8a9OaqC3lfL4jTWCltSD2PDlW4qjlVAem/sYsiyrg==}
+  /payload@3.0.0-beta.36(@swc/core@1.4.12)(@swc/types@0.1.6)(graphql@16.8.1)(typescript@5.4.5):
+    resolution: {integrity: sha512-dycaacUtSE4YZQxB3FNTbD5dXPXC/aQz8vnYMSFLRo8k2MBYWUK3e7Vp2RHm2S+lO40KQpOQ23Zq4ePaRA6B0w==}
     engines: {node: ^18.20.2 || >=20.6.0}
     hasBin: true
     peerDependencies:
@@ -5400,7 +5400,7 @@ packages:
       '@swc/core':
         optional: true
     dependencies:
-      '@payloadcms/translations': 3.0.0-beta.34
+      '@payloadcms/translations': 3.0.0-beta.36
       '@swc-node/core': 1.13.0(@swc/core@1.4.12)(@swc/types@0.1.6)
       '@swc-node/sourcemap-support': 0.5.0
       '@swc/core': 1.4.12
@@ -5670,14 +5670,14 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /react-datepicker@6.2.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-GzEOiE6yLfp9P6XNkOhXuYtZHzoAx3tirbi7/dj2WHlGM+NGE1lefceqGR0ZrYsYaqsNJhIJFTgwUpzVzA+mjw==}
+  /react-datepicker@6.9.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-QTxuzeem7BUfVFWv+g5WuvzT0c5BPo+XTCNbMTZKSZQLU+cMMwSUHwspaxuIcDlwNcOH0tiJ+bh1fJ2yxOGYWA==}
     peerDependencies:
       react: ^16.9.0 || ^17 || ^18
       react-dom: ^16.9.0 || ^17 || ^18
     dependencies:
       '@floating-ui/react': 0.26.10(react-dom@18.2.0)(react@18.2.0)
-      classnames: 2.5.1
+      clsx: 2.1.1
       date-fns: 3.3.1
       prop-types: 15.8.1
       react: 18.2.0
@@ -5751,8 +5751,8 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /react-select@5.7.4(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-NhuE56X+p9QDFh4BgeygHFIvJJszO1i1KSkg/JPcIJrbovyRtI+GuOEa4XzFCEpZRAEoEI8u/cAHK+jG/PgUzQ==}
+  /react-select@5.8.0(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-TfjLDo58XrhP6VG5M/Mi56Us0Yt8X7xD6cDybC7yoRMUNm7BGO7qk8J0TLQOua/prb8vUOtsfnXZwfm30HGsAA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
