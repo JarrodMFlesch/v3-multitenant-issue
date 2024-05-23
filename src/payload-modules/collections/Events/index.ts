@@ -59,12 +59,6 @@ export const Events: CollectionConfig = {
       type: 'text',
       required: true,
     },
-    {
-      name: 'poster',
-      type: 'relationship',
-      relationTo: 'media',
-      required: true,
-    },
     tenant,
   ],
 }

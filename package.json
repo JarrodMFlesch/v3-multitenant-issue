@@ -19,14 +19,9 @@
     "node": "^18.20.2 || >=20.6.0"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.552.0",
-    "@aws-sdk/lib-storage": "^3.552.0",
     "@payloadcms/db-mongodb": "3.0.0-beta.34",
-    "@payloadcms/db-postgres": "3.0.0-beta.34",
     "@payloadcms/next": "3.0.0-beta.34",
     "@payloadcms/richtext-lexical": "3.0.0-beta.34",
-    "@payloadcms/richtext-slate": "3.0.0-beta.34",
-    "@payloadcms/storage-s3": "3.0.0-beta.34",
     "@payloadcms/ui": "3.0.0-beta.34",
     "aws-crt": "^1.21.1",
     "cross-env": "^7.0.3",
