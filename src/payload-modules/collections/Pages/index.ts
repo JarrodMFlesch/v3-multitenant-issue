@@ -1,6 +1,5 @@
 import type { CollectionConfig } from 'payload/types'
 
-import richText from '../../fields/richText'
 import { tenant } from '../../fields/tenant'
 import { loggedIn } from './access/loggedIn'
 import { tenantAdmins } from './access/tenantAdmins'
@@ -38,6 +37,5 @@ export const Pages: CollectionConfig = {
       },
     },
     tenant,
-    richText(),
   ],
 }
